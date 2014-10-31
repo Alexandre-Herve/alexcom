@@ -20,11 +20,6 @@ angular.module( 'alexcom.workflow', [
  * And of course we define a controller for our route.
  */
 .controller( 'WorkflowCtrl', ['$scope', '$state', function WorkflowController( $scope, $state ) {
-  console.log( $state.current );
-}])
-
-
-
-;
+}]);
 
 

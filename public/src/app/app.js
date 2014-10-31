@@ -7,13 +7,11 @@ angular.module( 'alexcom', [
   'alexcom.resume',
   'alexcom.projects',
   'alexcom.workflow'
+
 ])
 
-.config( ['$stateProvider', '$urlRouterProvider', function myAppConfig ( $stateProvider, $urlRouterProvider ) {
+.config(['$stateProvider', '$urlRouterProvider', function myAppConfig ( $stateProvider, $urlRouterProvider ) {
   $urlRouterProvider.otherwise( '/home' );
-}])
-
-.run( [function run () {
 }])
 
 .controller( 'AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
@@ -24,10 +22,7 @@ angular.module( 'alexcom', [
   });
 
   $scope.nav = function( path ){
-    console.log( path );
     $location.path( path );
   };
-}])
-
-;
+}]);
 
