@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" ng-click="isOpened = !isOpened">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">
+      <img ng-src="/assets/images/log_base.png" style="max-height: 50px; margin-top: -15px">
+    </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar-collapse" collapse="!isOpened">
+      <ul class="nav navbar-nav">
+        <li ng-class="{'active': $state.$current == 'home'}"><a href="" ng-click="nav('/home')">Home</a></li>
+        <li ng-class="{'active': $state.$current == 'resume'}"><a href="" ng-click="nav('/resume')">Resume</a></li>
+        <li ng-class="{'active': $state.$current == 'workflow'}"><a href="" ng-click="nav('/workflow')">Workflow</a></li>
+        <li ng-class="{'active': $state.$current == 'projects'}"><a href="" ng-click="nav('/projects')">Projects</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
