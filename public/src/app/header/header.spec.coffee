@@ -6,11 +6,9 @@ describe 'header', () ->
 
   # controller
   describe 'Header Controller', () ->
-    beforeEach inject ( $injector ) ->
-      $state = $injector.get '$state'
-      $rootScope = $injector.get '$rootScope'
+    beforeEach inject ( $rootScope, $controller ) ->
+
       $scope = $rootScope.$new()
-      $controller = $injector.get '$controller'
       createController = () ->
         $controller 'HeaderCtrl', $scope: $scope
 
@@ -20,17 +18,15 @@ describe 'header', () ->
 
     it 'should have $state in the $scope', () ->
       controller = createController()
-      expect( $scope.$state ).not.toBe( undefined )
+      expect( controller.$state ).not.toBe( undefined )
 
 
   # directive
   describe 'axHeader directive', () ->
-    beforeEach inject ($injector) ->
-      $rootScope = $injector.get '$rootScope'
-      $compile = $injector.get '$compile'
+    beforeEach inject ($rootScope, $compile, $state) ->
+
       $scope = $rootScope.$new()
       element = '<div ax-header></div>'
-      $state = $injector.get '$state'
       $state.$current = 'home'
       element = $compile(element)($scope)
       $scope.$digest()

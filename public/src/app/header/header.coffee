@@ -6,7 +6,10 @@ angular.module('alexcom.header', [
   .directive 'axHeader', () ->
     restrict: 'A'
     controller: 'HeaderCtrl'
+    controllerAs: 'header'
     templateUrl: 'header/header.tpl.html'
 
-  .controller 'HeaderCtrl', ($scope, $state) ->
-    $scope.$state = $state
+  .controller 'HeaderCtrl',
+    class HeaderCtrl
+      @$inject: ['$state']
+      constructor: (@$state) ->
