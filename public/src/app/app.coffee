@@ -11,6 +11,9 @@ angular.module( "alexcom", [
   .config ($stateProvider, $urlRouterProvider) ->
     $urlRouterProvider.otherwise "/home"
 
+  .config ($locationProvider) ->
+    $locationProvider.html5Mode(true)
+
   .controller "AppCtrl", ($scope, $location) ->
 
     $scope.$on '$stateChangeSuccess', ( event, toState ) ->

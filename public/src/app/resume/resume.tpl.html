@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <section class="resume-section" ng-repeat="section in resume.sections">
+        <h2>{{ section.title }}</h2>
+        <article class="resume-step" ng-repeat="step in section.steps" ng-include="'resume/resumeStep.tpl.html'"></article>
+      </section>
+    </div>
+  </div>
+</div>

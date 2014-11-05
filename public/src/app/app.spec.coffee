@@ -1,10 +1,7 @@
 describe 'App Module', () ->
   beforeEach module 'alexcom'
 
-  $location = {}
-  $scope = {}
-  appCtrl = {}
-  $state = {}
+  $location = $scope = appCtrl = $controller = $state = $rootScope = {}
 
   describe 'AppCtrl', () ->
     beforeEach inject ( $controller, _$location_, $rootScope ) ->
@@ -23,12 +20,11 @@ describe 'App Module', () ->
       expect( $location.path() ).toBe '/lol'
 
   describe 'State redirection', () ->
-    beforeEach inject ($injector, $rootScope, _$location_, _$state_) ->
+    beforeEach inject ( $rootScope, _$location_, _$state_) ->
       $state = _$state_
       $location = _$location_
       $location.path 'qsdq qdfqsdf qsdf qsd'
       $rootScope.$digest()
 
     it 'Should have been redirected to home state', () ->
-      expect($state.current.url).toBe '/home'
-
+      expect( $state.current.url ).toBe '/home'

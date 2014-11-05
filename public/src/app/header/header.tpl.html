@@ -8,18 +8,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">
-      <img ng-src="/assets/images/log_base.png" style="max-height: 50px; margin-top: -15px">
-    </a>
+      <a>
+        <img class="profile-pic" ng-src="assets/images/moi_micro_tete.jpg">
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-collapse" collapse="!isOpened">
       <ul class="nav navbar-nav">
-        <li ng-class="{'active': header.$state.$current == 'home'}"><a href="" ng-click="nav('/home')">Home</a></li>
+        <li ng-class="{'active': header.$state.$current == 'home'}"><a href="" ng-click="nav('/home')">Alexandre Hervé</a></li>
         <li ng-class="{'active': header.$state.$current == 'resume'}"><a href="" ng-click="nav('/resume')">Resume</a></li>
-        <li ng-class="{'active': header.$state.$current == 'workflow'}"><a href="" ng-click="nav('/workflow')">Workflow</a></li>
+        <!--
+        <li ng-class="{'active': header.$state.$current == 'workflow'}"><a href="" ng-click="nav('/workflow')">skills</a></li>
         <li ng-class="{'active': header.$state.$current == 'projects'}"><a href="" ng-click="nav('/projects')">Projects</a></li>
+        -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
