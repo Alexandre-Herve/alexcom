@@ -1,12 +1,8 @@
 {
-  "author": "Alexandre hervé",
-  "name": "Alexandre Hervé website",
+  "author": "Alex",
+  "name": "alexcom",
   "version": "1.0.0",
   "homepage": "http://alexandreherve.com",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Alexandre-Herve/alexcom.git"
-  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
