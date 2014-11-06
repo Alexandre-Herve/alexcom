@@ -13,6 +13,5 @@
   },
   "scripts": {
     "start": "node server.js"
-    "postinstall": "cd pubilc/ && npm install && grunt build"
   }
 }
