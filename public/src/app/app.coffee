@@ -1,4 +1,4 @@
-angular.module( "alexcom", [
+module = angular.module( "alexcom", [
   'ui.router',
   'ui.bootstrap',
 
@@ -8,20 +8,20 @@ angular.module( "alexcom", [
   'alexcom.projects',
   'alexcom.workflow'
 ])
-  .config ($stateProvider, $urlRouterProvider) ->
-    $urlRouterProvider.otherwise "/home"
+module.config ($stateProvider, $urlRouterProvider) ->
+  $urlRouterProvider.otherwise "/home"
 
-  .config ($locationProvider) ->
-    $locationProvider.html5Mode(true)
+module.config ($locationProvider) ->
+  $locationProvider.html5Mode(true)
 
-  .controller "AppCtrl", ($scope, $location) ->
+module.controller "AppCtrl", ($scope, $location) ->
 
-    $scope.$on '$stateChangeSuccess', ( event, toState ) ->
-      $scope.pageTitle = toState.data.pageTitle \
-      + ' | Alexandre' \
-      if angular.isDefined toState.data.pageTitle
+  $scope.$on '$stateChangeSuccess', ( event, toState ) ->
+    $scope.pageTitle = toState.data.pageTitle \
+    + ' | Alexandre' \
+    if angular.isDefined toState.data.pageTitle
 
-    $scope.nav = (path) ->
-      $location.path path
+  $scope.nav = (path) ->
+    $location.path path
 
 
